@@ -36,7 +36,6 @@ using ObjQt::toQt;
 	OF_INVALID_INIT_METHOD
 }
 
-
 - initWithQPushButton: (QPushButton*)qPushButton
 {
 	return [super initWithQAbstractButton: qPushButton];
@@ -44,7 +43,7 @@ using ObjQt::toQt;
 
 - initWithText: (OFString*) text
 {
-    try {
+	try {
 		self = [self initWithQPushButton:
 		    new QPushButton(toQt(text))];
 
@@ -58,9 +57,10 @@ using ObjQt::toQt;
 	}
 }
 
-- initWithIcon: (QIcon)icon Text: (OFString*)text
+- initWithIcon: (QIcon)icon 
+	  text: (OFString*)text
 {
-    try {
+	try {
 		self = [self initWithQPushButton:
 		    new QPushButton(icon, toQt(text))];
 
@@ -118,5 +118,4 @@ using ObjQt::toQt;
 {
 	toQt(self)->setFlat(flat);
 }
-
 @end

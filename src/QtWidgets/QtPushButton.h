@@ -28,15 +28,16 @@
 
 @interface QtPushButton: QtAbstractButton
 @property (readonly) QPushButton* qPushButton;
-@property (getter=menu) QMenu* menu;
-@property (getter=autoDefault) bool autoDefault;
+@property QMenu* menu;
+@property bool autoDefault;
 @property (getter=isDefault, setter=setDefault:) bool default_;
 @property (getter=isFlat) bool flat;
 
 
 - initWithQPushButton: (QPushButton*)qPushButton;
 - initWithText: (OFString*) text;
-- initWithIcon: (QIcon) icon Text: (OFString*)text;
+- initWithIcon: (QIcon) icon
+	  text: (OFString*)text;
 
 @end
 
